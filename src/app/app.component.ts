@@ -5,13 +5,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 //  import { SignupPage } from '../pages/signup/signup';
 //  import { SigninPage } from '../pages/signin/signin';
+import { CreatevotePage } from '../pages/createvote/createvote';
+import { ProfilePage } from '../pages/profile/profile';
 // import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { HomePage } from '../pages/home/home';
+// import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = CreatevotePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -21,5 +24,21 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  iconsArray = [
+
+    { "name":"ios-home", "des":"Home"},
+     {"name":"ios-hand","des":"Create VOTE"},
+    { "name":"md-person","des":"Profile"}
+ ]
+ 
+ pageArray=[HomePage,CreatevotePage,ProfilePage];
+ 
+ 
+ changePage(k){
+ 
+ this.rootPage=this.pageArray[k]
+ 
+ }
 }
 

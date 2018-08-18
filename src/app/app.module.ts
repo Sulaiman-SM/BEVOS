@@ -6,9 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ProfilePage } from '../pages/profile/profile';
+import { CreatevotePage } from '../pages/createvote/createvote';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
+import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 
 
 import { AuthProvider } from '../providers/auth/auth';
@@ -37,7 +40,10 @@ export const firebaseConfig = {
     HomePage,
     SigninPage,
     SignupPage,
-    ForgotpasswordPage
+    ProfilePage,
+    CreatevotePage,
+    ForgotpasswordPage,
+    AdvancevotingPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,10 @@ export const firebaseConfig = {
     HomePage,
     SigninPage,
     SignupPage,
-    ForgotpasswordPage
+    ProfilePage,
+    CreatevotePage,
+    ForgotpasswordPage,
+    AdvancevotingPage
   ],
   providers: [
     StatusBar,

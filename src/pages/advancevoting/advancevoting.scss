@@ -1,0 +1,64 @@
+page-advancevoting {
+  .tutorial-page {
+    
+
+    background-image: url(../../assets/imgs/Homepage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+    ion-slides{
+      width: 100%;
+      height: 100%;
+
+      ion-slide{
+        width: 100%;
+        height: 100%;
+
+        .inputFields{
+          margin: auto;
+          width: 95%;
+          
+          .item-md{
+            // border-top: 1px solid grey;
+            border-bottom: 1px solid rgb(63, 62, 62);
+            border-right: 1px solid rgb(63, 62, 62);
+            border-radius: 10%;
+            background-color: rgba(177, 177, 195, 0.5);
+          }
+          .text-primary {
+            color: color($colors, primary);
+          }
+      }
+      .datetimeDiv{
+        width: 95%;
+        margin: auto;
+        margin-left: 3%;
+        margin-right: 3%;
+        .datetime{
+          padding-left: 2;
+          padding-right: 2;
+          
+          background-color: rgba(177, 177, 195, 0.5);
+        }
+      }
+          
+      }
+  }
+  
+    .slide-title {
+      margin-top: 5px;;
+    }
+  
+    .slide-image {
+      max-height: 50%;
+      max-width: 60%;
+      margin: 18px 0;
+      margin-bottom: 0;
+      
+    }
+  
+  
+  }
+}
