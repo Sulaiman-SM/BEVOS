@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { AdvancevotingPage } from '../advancevoting/advancevoting';
 
-/**
- * Generated class for the CreatevotePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-createvote',
@@ -20,5 +15,11 @@ export class CreatevotePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreatevotePage');
   }
+  
+  toVotingPage(){
+    this.navCtrl.push(AdvancevotingPage);
+  }
+
+
 
 }

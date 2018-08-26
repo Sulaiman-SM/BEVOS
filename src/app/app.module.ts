@@ -12,6 +12,7 @@ import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
+import { ResultsPage } from '../pages/results/results';
 
 
 import { AuthProvider } from '../providers/auth/auth';
@@ -19,6 +20,14 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { CallNumber } from '@ionic-native/call-number';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Chart } from 'chart.js';
+
+
+
 
 import { NativeStorage } from '@ionic-native/native-storage';
 
@@ -43,6 +52,7 @@ export const firebaseConfig = {
     ProfilePage,
     CreatevotePage,
     ForgotpasswordPage,
+    ResultsPage,
     AdvancevotingPage
   ],
   imports: [
@@ -61,6 +71,7 @@ export const firebaseConfig = {
     SignupPage,
     ProfilePage,
     CreatevotePage,
+    ResultsPage,
     ForgotpasswordPage,
     AdvancevotingPage
   ],
@@ -69,8 +80,13 @@ export const firebaseConfig = {
     SplashScreen,
     AuthProvider,
     NativeStorage,
+    CallNumber,
+    Geolocation,
+    Camera,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    Chart
   ]
 })
 export class AppModule {}

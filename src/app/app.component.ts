@@ -3,18 +3,19 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
- import { SignupPage } from '../pages/signup/signup';
+//  import { SignupPage } from '../pages/signup/signup';
 //  import { SigninPage } from '../pages/signin/signin';
 import { CreatevotePage } from '../pages/createvote/createvote';
 import { ProfilePage } from '../pages/profile/profile';
 // import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home'; 
+import { ResultsPage } from '../pages/results/results';
 // import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SignupPage;
+  rootPage:any = HomePage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
