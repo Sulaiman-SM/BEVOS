@@ -20,8 +20,8 @@ export class SignupPage {
     "usertype":""
   };
 
-  usertype="user"
-  btn = 0;
+  usertype="user";
+  btn = 1;
 
   constructor(
     public navCtrl: NavController,

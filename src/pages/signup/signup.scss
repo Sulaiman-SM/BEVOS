@@ -1,16 +1,16 @@
 page-signup {
-    // ion-header {
-    //     .toolbar {
-    //       position: absolute;
+    ion-header {
+        .toolbar {
+          position: absolute;
       
-    //       .toolbar-background {
-    //         background: transparent;
-    //       }
-    //       .toolbar-title {
-    //         color: black;
-    //       }
-    //     }
-    //   }
+          .toolbar-background {
+            background: transparent;
+          }
+          .toolbar-title {
+            color: black;
+          }
+        }
+      }
     ion-content{
         background-image: url(../assets/imgs/reh.png);
         background-repeat: no-repeat;

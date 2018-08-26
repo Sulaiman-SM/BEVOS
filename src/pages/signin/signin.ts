@@ -9,6 +9,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { ForgotpasswordPage } from '../forgotpassword/forgotpassword';
 import { SignupPage } from '../signup/signup';
 import { HomePage } from '../home/home';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-signin',
@@ -53,7 +54,7 @@ export class SigninPage {
             this.nativeStorage.setItem('userdetails', {uid: successdata.uid})
             .then(
               () => {
-                this.navCtrl.push(HomePage);
+                this.navCtrl.push(TabsPage);
               },
               error => {
                 this.showAlert("Unable to save user details in app");

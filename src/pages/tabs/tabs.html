@@ -1,0 +1,10 @@
+<ion-nav [root]="tabsRootpage"></ion-nav>
+<ion-footer>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col align="center" *ngFor="let i of iconsArray; let k=index" (click)="changePage(k)">
+                <ion-icon name="{{i.name}}"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

@@ -13,6 +13,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 import { ResultsPage } from '../pages/results/results';
+import { TabsPage } from '../pages/tabs/tabs';
 
 
 import { AuthProvider } from '../providers/auth/auth';
@@ -24,7 +25,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { Chart } from 'chart.js';
+// import { Chart } from 'chart.js';
 
 
 
@@ -53,6 +54,7 @@ export const firebaseConfig = {
     CreatevotePage,
     ForgotpasswordPage,
     ResultsPage,
+    TabsPage,
     AdvancevotingPage
   ],
   imports: [
@@ -72,6 +74,7 @@ export const firebaseConfig = {
     ProfilePage,
     CreatevotePage,
     ResultsPage,
+    TabsPage,
     ForgotpasswordPage,
     AdvancevotingPage
   ],
@@ -86,7 +89,7 @@ export const firebaseConfig = {
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    Chart
+    // Chart
   ]
 })
 export class AppModule {}
