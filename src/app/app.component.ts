@@ -8,17 +8,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { CreatevotePage } from '../pages/createvote/createvote';
 //import { ProfilePage } from '../pages/profile/profile';
 // import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
-import { HomePage } from '../pages/home/home'; 
-//import { ResultsPage } from '../pages/results/results';
+// import { HomePage } from '../pages/home/home'; 
+// import { ResultsPage } from '../pages/results/results';
 // import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 import { TabsPage } from '../pages/tabs/tabs';
-import { SigninPage } from '../pages/signin/signin';
+// import { SigninPage } from '../pages/signin/signin';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SigninPage;
+  rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

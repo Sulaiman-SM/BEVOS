@@ -21,25 +21,24 @@
 
 
 
-  <!-- <div class="class2">
+  <div class="class2">
     <ion-list>
       <ion-item>
         <ion-label>Chart type</ion-label>
-        <ion-select>
-            [(ngModel)]="chartType"
-          <ion-option value="1"> Bar Chart </ion-option>
-          <ion-option value="2">Doughnut Chart</ion-option>
-          <ion-option value="3">Line Chart</ion-option>
+        <ion-select [(ngModel)]="chartNum">       
+          <ion-option value="1" > Bar Chart </ion-option>
+          <ion-option value="2" >Line Chart</ion-option>
+          <ion-option value="3" >Doughnut Chart</ion-option>
         </ion-select>
       </ion-item>
     </ion-list>
 
 
-  </div> -->
+  </div>
 
 
-
-  <!--<ion-card *ngIf="chartType==BarChart">
+<div [hidden]="chartNum==2 || chartNum==3">
+  <ion-card >
     <ion-card-header>
       Bar Chart
     </ion-card-header>
@@ -47,17 +46,10 @@
       <canvas #barCanvas></canvas>
     </ion-card-content>
   </ion-card>
+  </div>
 
-  <ion-card *ngIf="chartType==DoughnutChart">
-    <ion-card-header>
-      Doughnut Chart
-    </ion-card-header>
-    <ion-card-content>
-      <canvas #doughnutCanvas></canvas>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card *ngIf="chartType==LineChart">
+  <div [hidden]="chartNum==1 || chartNum==3">
+  <ion-card >
     <ion-card-header>
       Line Chart
     </ion-card-header>
@@ -65,7 +57,18 @@
       <canvas #lineCanvas></canvas>
     </ion-card-content>
   </ion-card>
-!-->
+  </div>
+
+  <div [hidden]="chartNum==1 || chartNum==2">
+  <ion-card >
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+    </div>
 
 
 
@@ -74,3 +77,30 @@
 
   <button ion-button outline>Share Results</button>
 </ion-content>
+
+<!-- <ion-card>
+    <ion-card-header>
+      Bar Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Doughnut Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #doughnutCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Line Chart
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card> -->

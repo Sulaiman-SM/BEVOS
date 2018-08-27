@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { App,NavController, NavParams } from 'ionic-angular';
 import { AdvancevotingPage } from '../advancevoting/advancevoting';
 
 
@@ -9,7 +9,7 @@ import { AdvancevotingPage } from '../advancevoting/advancevoting';
 })
 export class CreatevotePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public app:App) {
   }
 
   ionViewDidLoad() {
@@ -17,7 +17,7 @@ export class CreatevotePage {
   }
   
   toVotingPage(){
-    this.navCtrl.push(AdvancevotingPage);
+    this.app.getRootNav().push(AdvancevotingPage);
   }
 
 

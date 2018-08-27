@@ -26,6 +26,8 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 // import { Chart } from 'chart.js';
+import { ChartsModule } from 'ng2-charts';
+
 
 
 
@@ -62,7 +64,8 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
      AngularFireAuthModule,
-     AngularFireDatabaseModule
+     AngularFireDatabaseModule,
+     ChartsModule
 
   ],
   bootstrap: [IonicApp],
