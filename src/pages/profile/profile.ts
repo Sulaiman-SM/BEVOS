@@ -18,8 +18,28 @@ export class ProfilePage {
     public actionSheetCtrl: ActionSheetController,public callNumber: CallNumber,public iab: InAppBrowser,public geolocation: Geolocation) {
   }
 
-
   
+  
+  gotoalaret()
+  {
+  let mobileNumber="+986 92903349";
+  this.callNumber.callNumber(mobileNumber, true)
+    .then(res => console.log('Launched dialer!', res))
+    .catch(err => console.log('Error launching dialer', err));
+  }
+  
+  
+  
+  
+  
+  ListArray=[
+    {"icon":"md-globe","des":"www.google.com"},
+    {"icon":"ios-mail-outline","des":"aljhwaria@gmail.com"},
+    {"icon":"ios-call-outline","des":"92903349"},
+    {"icon":"md-locate","des":"Oman,Muscat"}
+  ];
+
+   
   imageArray = [
     { "title": "health voting", "by": "conducted by SQU", "TIME": "Time & Date" },
     { "title": "health voting", "by": "conducted by SQU", "TIME": "Time & Date" },
@@ -31,106 +51,26 @@ export class ProfilePage {
 
   ];
 
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+  
+  
+    callPlugins(k){
+    if(k==0){
+      this.openWebsite();
+    }
+  
+    else if(k==3){
+      this.showLocation();
+    }
+    }
+  
+  
+  openWebsite(){
+    this.iab.create('https://google.com/');
+  
   }
-
-
-
-  presentActionSheet() {//start1
-    const actionSheet = this.actionSheetCtrl.create({
-      title: 'select Image',
-      buttons: [
-        {
-          text: 'Album',
-          handler: () => {
-            this.openAlbum();
-
-          }
-        }, {
-          text: 'Camera',
-          handler: () => {
-            this.openCamera();
-
-
-          }
-        }, {
-          text: 'Cancel',
-          role: 'cancel',
-
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    actionSheet.present();
-  }//end1
-
-
-  base64Image = "../assets/imgs/pro.png";
-
-
-  openAlbum() {//start2
-
-    const options: CameraOptions = {
-      quality: 100,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    }
-
-    this.camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64 (DATA_URL):
-      this.base64Image = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      // Handle error
-    });
-  }//end2
-
-
-  openCamera() {//start2
-
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
-      encodingType: this.camera.EncodingType.JPEG,
-      mediaType: this.camera.MediaType.PICTURE
-    }
-
-    this.camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64 (DATA_URL):
-      this.base64Image = 'data:image/jpeg;base64,' + imageData;
-    }, (err) => {
-      // Handle error
-    });
-  }//end2
-
-
-
-  callNumberMethod(){//start3
-   let MobileNumber="+98692903349";
-    this.callNumber.callNumber(MobileNumber, true)
-  .then(res => console.log('Launched dialer!', res))
-  .catch(err => console.log('Error launching dialer', err));
-  }//end3
-
-
-  website='https://google.com/';
-  openweb(){//start4
-    
-    this.iab.create(this.website);
-
-
-  }//end4
-
-
-  showLocation(){//start5
+  
+  
+  showLocation(){
     //this.geolocation.getCurrentPosition().then((resp) => {
       // resp.coords.latitude
       // resp.coords.longitude
@@ -142,7 +82,76 @@ export class ProfilePage {
      //  console.log('Error getting location', error);
      //});
      
-  }//end5
+  }
+  
+  
+  base64Image = "../assets/imgs/pro.png";
+  
+  getImage(){
+    this.presentActionSheet();
+  }
+  
+  getImageFromCamera(){
+  
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,//GIVES u the path of ur img in ur device
+      encodingType: this.camera.EncodingType.JPEG,// gives u format of img
+      mediaType: this.camera.MediaType.PICTURE//
+    }
+    
+    this.camera.getPicture(options).then((imageData) => {
+     // imageData is either a base64 encoded string or a file URI
+     // If it's base64 (DATA_URL):
+     this.base64Image = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+     // Handle error
+    });
+  }
+  
+  getImageFromGallery(){
+    
+    const options: CameraOptions = {
+      quality: 100,
+      sourceType:this.camera.PictureSourceType.PHOTOLIBRARY, //THE ONLY DIFFERENCE BETWEEN CAMERA AND gALLERY METHODS 
+      destinationType: this.camera.DestinationType.DATA_URL,//GIVES u the path of ur img in ur device
+      encodingType: this.camera.EncodingType.JPEG,// gives u format of img
+      mediaType: this.camera.MediaType.PICTURE//
+    }
+    
+    this.camera.getPicture(options).then((imageData) => {
+     // imageData is either a base64 encoded string or a file URI
+     // If it's base64 (DATA_URL):
+     this.base64Image = 'data:image/jpeg;base64,' + imageData;
+    }, (err) => {
+     // Handle error
+    });
+  }
+  
+  presentActionSheet() {
+    const actionSheet = this.actionSheetCtrl.create({
+      title: 'Select Image',
+      buttons: [
+        {
+          text: 'camera',
+          handler: () => {
+            this.getImageFromCamera();
+          }
+        },{
+          text: 'Gallery',
+          handler: () => {
+            this.getImageFromGallery();        }
+        },{
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    actionSheet.present();
+  }
 }
 
 

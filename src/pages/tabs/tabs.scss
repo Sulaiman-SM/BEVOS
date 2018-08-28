@@ -6,4 +6,25 @@ page-tabs {
         font-size: 20px !important;
     }
 
+    .toolbar-background-md{
+        background: black !important;
+    }
+
+    .ion-ios-home:before{
+                color:white;// rgb(6, 66, 66);
+                font-size: 25px;
+
+      }
+      
+      .ion-ios-hand:before{
+        color: white;//rgb(6, 66, 66);
+        font-size: 25px;
+
+      }
+
+      .ion-md-person:before{
+        color: white;//rgb(6, 66, 66);
+        font-size: 25px;
+      }
+
 }

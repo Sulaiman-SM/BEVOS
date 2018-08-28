@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SigninPage } from '../../pages/signin/signin';
 
 /**
  * Generated class for the IntrosliderPage page.
@@ -20,5 +21,13 @@ export class IntrosliderPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad IntrosliderPage');
   }
+
+
+
+  goToSignIn(){
+    this.navCtrl.push(SigninPage);
+
+  }
+
 
 }
