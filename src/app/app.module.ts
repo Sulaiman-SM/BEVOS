@@ -14,6 +14,7 @@ import { ForgotpasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 import { ResultsPage } from '../pages/results/results';
 import { TabsPage } from '../pages/tabs/tabs';
+import { IntrosliderPage } from '../pages/introslider/introslider';
 
 
 import { AuthProvider } from '../providers/auth/auth';
@@ -57,7 +58,8 @@ export const firebaseConfig = {
     ForgotpasswordPage,
     ResultsPage,
     TabsPage,
-    AdvancevotingPage
+    AdvancevotingPage,
+    IntrosliderPage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +81,8 @@ export const firebaseConfig = {
     ResultsPage,
     TabsPage,
     ForgotpasswordPage,
-    AdvancevotingPage
+    AdvancevotingPage,
+    IntrosliderPage
   ],
   providers: [
     StatusBar,

@@ -9,17 +9,17 @@
 
   <div class="signupGroup">
     <div class="clickOn" (click)="goToUser()">
-      <img src="../../assets/imgs/user.png">
+      <img src="../../assets/imgs/userlogo.png">
       <br> User
     </div>
 
     <div class="clickOn" (click)="goToAdmin()">
-      <img src="../../assets/imgs/admin.png">
+      <img src="../../assets/imgs/adminlogo.png">
       <br> Admin
     </div>
 
     <div class="clickOn" (click)="goToBusiness()">
-        <img src="../../assets/imgs/business.png">
+      <img src="../../assets/imgs/busslogo.png">
       <br> Business
     </div>
   </div>
@@ -63,12 +63,12 @@
       <ion-input type="password" [(ngModel)]="data.confirmpassword"></ion-input>
     </ion-item>
     <br>
-    <button ion-button block round color="primary" (click)="signUpUser()">SIGN UP</button>
+    <button ion-button outline (click)="signUpUser()">SIGN UP</button>
     <div class="signup">
-        <h5>Have Account
-          <div class="uu" (click)="goToSignIn()">Sign In!</div>
-        </h5>
-      </div>
+      <h5>Have Account
+        <div class="uu" (click)="goToSignIn()">Sign In!</div>
+      </h5>
+    </div>
 
   </div>
 
@@ -96,11 +96,11 @@
     <br>
     <button ion-button block round color="primary" (click)="signUpUser()">SIGN UP</button>
     <div class="signup">
-        <h5>Have Account
-          <div class="uu" (click)="goToSignIn()">Sign In!</div>
-        </h5>
-      </div>
+      <h5>Have Account
+        <div class="uu" (click)="goToSignIn()">Sign In!</div>
+      </h5>
     </div>
+  </div>
 
 
   <div class="btnDiv3" *ngIf="btn==3">
@@ -126,10 +126,10 @@
     <br>
     <button ion-button block round color="primary" (click)="signUpUser()">SIGN UP</button>
     <div class="signup">
-        <h5>Have Account
-          <div class="uu" (click)="goToSignIn()">Sign In!</div>
-        </h5>
-      </div>
+      <h5>Have Account
+        <div class="uu" (click)="goToSignIn()">Sign In!</div>
+      </h5>
+    </div>
   </div>
 
 </ion-content>

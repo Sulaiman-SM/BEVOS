@@ -1,71 +1,102 @@
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
 <ion-header>
-    <ion-navbar>
-    </ion-navbar>
-  </ion-header>
+  <ion-navbar>
+
+  </ion-navbar>
+</ion-header>
+
+
 
 <ion-content class="tutorial-page">
 
-  <ion-slides pager>
-      <!-- first slide -->
+  <ion-slides [class]="keyboard.isOpen() ? 'open-keyboard' : 'closed-keyboard'">
+    <!-- first slide -->
     <ion-slide>
-      <img src="../assets/imgs/vote.png" class="slide-image" />
-      <h2 class="slide-title">Create Voting Event!</h2>
+
 
       <div class="inputFields">
-        <ion-item>
-          <ion-label floating class="text-primary">
-            <ion-icon name="person" item-start></ion-icon>
-            Voting Title
-          </ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
+        <img src="../assets/imgs/step1.png" class="slide-image" />
 
-        <ion-item class="textarea">
-          <ion-label floating class="text-primary">
-            <ion-icon name="person" item-start></ion-icon>
-            Voting Description
-          </ion-label>
-          <ion-textarea rows="5" type="text"></ion-textarea>
-        </ion-item>
+        <h2 class="slide-title">Create Voting Event!</h2>
+
+        <ion-list>
+          <ion-item>
+            <ion-label stacked class="text-primary">
+              <ion-icon name="md-clipboard" item-start></ion-icon>
+              Voting Title
+            </ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item class="textarea">
+            <ion-label stacked class="text-primary">
+              <ion-icon name="md-paper" item-start></ion-icon>
+              Voting Description
+            </ion-label>
+            <ion-textarea rows="5" type="text" content="scroll"></ion-textarea>
+          </ion-item>
+        </ion-list>
+
       </div>
 
     </ion-slide>
 
     <!-- second slide -->
     <ion-slide>
-      <img src="../assets/imgs/vote.png" class="slide-image" />
-      <h2 class="slide-title">Create Voting Event!</h2>
 
       <div class="datetimeDiv">
-      <ion-item class="datetime">
-          <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
-        <ion-label>End Date</ion-label>
-        <ion-datetime displayFormat="MMM DD YYYY"></ion-datetime>
-      </ion-item>
+        <img src="../assets/imgs/STEP2.png" class="slide-image1" />
 
-      <ion-item class="datetime">
-          <ion-icon name="md-time" color="primary" item-left></ion-icon>
-          <ion-label>End Time</ion-label>
-          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
-        </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+            <ion-label>Start Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="md-time" color="primary" item-left></ion-icon>
+            <ion-label>Start Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-item>
+            <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+            <ion-label>End Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="md-time" color="primary" item-left></ion-icon>
+            <ion-label>End Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+          </ion-item>
+        </ion-list>
+
+
+
       </div>
 
-      <button ion-button icon-start (click)="choose()">
-          <ion-icon name="add-circle" item-left></ion-icon>
-          Enter Voting choices
-        </button>
 
     </ion-slide>
 
     <!-- third slide -->
     <ion-slide>
-      <img src="../assets/imgs/Vote.png" class="slide-image" />
-      <h2 class="slide-title">Ready to Play?</h2>
-      <button ion-button large clear icon-end color="primary">
-        Continue
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
+      <div class="lastStep">
+        <img src="../assets/imgs/step3.png" class="slide-image3" />
+        <h2><strong>Ready to Deploy ?</strong></h2>
+        <button ion-button outline icon-end>
+          Continue
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+
+      </div>
+
     </ion-slide>
 
   </ion-slides>
+
 </ion-content>

@@ -12,7 +12,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // import { ResultsPage } from '../pages/results/results';
 // import { AdvancevotingPage } from '../pages/advancevoting/advancevoting';
 import { TabsPage } from '../pages/tabs/tabs';
-// import { SigninPage } from '../pages/signin/signin';
+ //import { SigninPage } from '../pages/signin/signin';
+ import { IntrosliderPage } from '../pages/introslider/introslider';
 
 @Component({
   templateUrl: 'app.html'

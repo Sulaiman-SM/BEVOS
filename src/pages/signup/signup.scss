@@ -12,7 +12,7 @@ page-signup {
         }
       }
     ion-content{
-        background-image: url(../assets/imgs/reh.png);
+        background-image:linear-gradient(rgba(0, 0, 0, 0.6)), url(../assets/imgs/slide8c.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -24,6 +24,11 @@ page-signup {
             margin-top: 10%;
         }
         .signupGroup{
+
+            img{
+                height: 60px;
+                width: 60px;
+            }
             // border: 2px solid black;
             margin-bottom: 5%;
             display: flex;
@@ -34,7 +39,8 @@ page-signup {
             text-align: center;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             font-size: large;
-            color: darkorange;
+            color: rgb(231, 175, 106);
+            letter-spacing: 1px;
             vertical-align: middle;
             .clickOn {
                 // border: 1px solid red;
@@ -44,6 +50,7 @@ page-signup {
         }
         }
         .btnDiv1, .btnDiv2, .btnDiv3 {
+            text-align: center;
             margin-top: 5%;
             width: 100%;
             height: 100%;
@@ -83,5 +90,24 @@ page-signup {
     
         }
     }
+    .button-outline-md,.button-outline-ios{
+        border-color: white !important;
+        color: white !important;
+        padding: 20px;
+        width: 60%;
+        background-color:rgba(238, 234, 234, 0.479) !important;
+        letter-spacing: 2px;
+        margin-top: 10px !important;
+        
+       
+    }
 
+    
+    ion-item{
+        margin-top: 10%;
+        background-color: transparent !important;
+        border-bottom:1px solid #c8c7cc !important;
+        border-top: 0px solid black !important;
+        color: wheat !important;
+    }
 }

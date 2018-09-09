@@ -1,72 +1,208 @@
 page-advancevoting {
-  .toolbar-background{
-    background-color: transparent;
-    box-shadow: 0px;
+  ion-header {
+   
+    .toolbar {
+      position: absolute;
+  
+      .toolbar-background {
+        background: transparent;
+      }
+      .toolbar-title {
+        color: black;
+      }
+    }
   }
-  .header-md::after{
-    content: none !important;
+
+  .open-keyboard {
+    ion-slides {
+      height: auto;
+    }
+  }
+  .closed-keyboard {
+    ion-slides {
+      height: 100%;
+    }
+  }
+.scroll-content{
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    }
+    .slide-zoom {
+        height: 100%;
+    }
+
+
+  h2{
+    font-family: Brush Script Std, cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
   }
   .tutorial-page {
     
+    font-family: Open Sans;
 
-    background-image: url(../../assets/imgs/Homepage.png);
+    background-image: url(../../assets/imgs/slide7d.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
 
     ion-slides{
+       
+
       width: 100%;
-      height: auto;
+      height: 100%;
       
 
       ion-slide{
+        overflow: auto;
+
+          margin-top: 0%;
         width: 100%;
         height: 100%;
-
+.slide-image{
+    width: 110px;
+    height: 100px;
+}
+.slide-image1{
+    width: 110px;
+    height: 100px;
+    margin-bottom: 20px;
+}
         .inputFields{
+            position: absolute;
+            top:30px;
+            right: 0px;
+            left: 0px;
           margin: auto;
           width: 95%;
-          
-          .item-md{
-            // border-top: 1px solid grey;
-            border-bottom: 1px solid rgb(63, 62, 62);
-            border-right: 1px solid rgb(63, 62, 62);
-            border-radius: 10%;
-            background-color: rgba(177, 177, 195, 0.5);
+          font-family: Open Sans;
+
+          .text-primary{
+              color: gray !important;
+              font-family: Open Sans;
+              font-size: 17px;
+              font-weight: bold;
+              letter-spacing: 2px;
+
           }
+          
+          .item-md, .item-ios{
+            // border-top: 1px solid grey;
+           // border-bottom: 1px solid rgb(63, 62, 62);
+           // border-right: 1px solid rgb(63, 62, 62);
+           border-bottom: none ;
+            background-color: rgba(255, 255, 255, 0.61) !important;
+            font-family: Open Sans;
+            border-radius: 5px;
+            width: 95%;
+            margin: auto;
+
+        }
           .text-primary {
             color: color($colors, primary);
           }
       }
       .datetimeDiv{
-        width: 95%;
-        margin: auto;
-        margin-left: 3%;
-        margin-right: 3%;
+        position: absolute;
+        top:50px;
+        right: 0px;
+        left: 0px;
+      margin: auto;
+      width: 95%;
+      font-family: Open Sans;
+      .icon-md-primary{
+          color: black !important;
+      }
+
         .datetime{
           padding-left: 2;
           padding-right: 2;
           
-          background-color: rgba(177, 177, 195, 0.5);
+        //  background-color: rgba(177, 177, 195, 0.5);
         }
+
+        
+        .item-md, .item-ios{
+            // border-top: 1px solid grey;
+           // border-bottom: 1px solid rgb(63, 62, 62);
+           // border-right: 1px solid rgb(63, 62, 62);
+           border-bottom: none ;
+            background-color: rgba(255, 255, 255, 0.61) !important;
+            font-family: Open Sans;
+            border-radius: 5px;
+            width: 95%;
+            margin: auto;
+
+        }
+          .text-primary {
+            color: color($colors, primary);
+          }
       }
           
       }
   }
+
+  .item-input ,ion-input,.item-input, ion-textarea{
+      color: black;
+      margin-bottom: 20px;
+     
+  }
   
-    .slide-title {
-      margin-top: 5px;;
-    }
+    // .slide-title {
+    //   margin-top: 5px;;
+    // }
   
-    .slide-image {
-      max-height: 50%;
-      max-width: 60%;
-      margin: 18px 0;
-      margin-bottom: 0;
+    // .slide-image {
+    //   max-height: 50%;
+    //   max-width: 60%;
+    //   margin: 18px 0;
+    //   margin-bottom: 0;
       
-    }
+    // }
   
   
   }
+
+  .lastStep{
+    position: absolute;
+    top:50px;
+    right: 0px;
+    left: 0px;
+  margin: auto;
+  width: 95%;
+  h2{
+    font-family: Brush Script Std, cursive;
+
+  }
+
+
+  .slide-image3{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+  }
+
+
+  .item-md.item-block .item-inner{
+      border-bottom: none !important;
+  }
+  .swiper-pagination-bullet-active{
+    background:white !important;
+  }
+  .swiper-pagination-bullet{
+    background: grey !important;
+}
+.button-outline-md,.button-outline-ios{
+    border-color: gray !important;
+    color: gray !important;
+    padding: 30px;
+    width: 60%;
+    background-color:rgba(255, 255, 255, 0.61) !important;
+    letter-spacing: 2px;
+    margin-top: 10px !important;
+    
+   
+}
 }
